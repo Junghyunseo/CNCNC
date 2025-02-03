@@ -1,0 +1,84 @@
+.Button {
+    padding: 15px 15px;   /* 버튼 안의 여백 */
+    font-size: 12px;
+    height: 140px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #1F2937;
+    color: white;
+    border: none;
+  }
+.ButtonContent {
+    display: flex;
+    flex-direction: column; /* 아이콘과 글씨를 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 10px; /* 아이콘과 텍스트 사이 간격 */
+}
+.Button:hover {
+    background-color: #2A3649;
+    cursor: pointer;
+}
+.Button:focus {
+    outline: none; /* 버튼 클릭릭 시 테두리 없애기 */
+}
+.Icon {
+    font-size: 24px;
+}
+.DialogOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* 가운데 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    position: fixed; /* 고정 */
+    top: 0; /* 위쪽 정렬 */
+    left: 0; /* 왼쪽 정렬 */
+    right: 0; /* 오른쪽 정렬 */
+    bottom: 0; /* 아래쪽 정렬 */
+    /*z-index: 1000; /* z-index */
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+.DialogContent {
+    background-color: white;
+    padding: 20px; /* 안쪽 여백 */
+    border-radius: 8px; 
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 */
+    position: fixed;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  /*화면 중앙 정렬*/
+    max-width: 500px;
+    width: 100%;
+    /*z-index: 1001; /* z-index */
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+.DialogTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.DialogDescription {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* 모달 배경 페이드 인 효과 */
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 모달 등장 애니메이션 */
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
