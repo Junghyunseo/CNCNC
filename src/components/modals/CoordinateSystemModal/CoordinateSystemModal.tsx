@@ -10,7 +10,7 @@ const CoordinateSystemModal: React.FC = () => {
             <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
             <Dialog.Content className="fixed top-1/2 left-1/2 bg-[#1F2937] p-6 rounded-lg border border-white max-w-[500px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
-                    <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-[#9CA3AF] trainsition colors duration-200 hover: text-gray-500" onClick={resetCoordinates}>✖</button>
+                    <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-[#9CA3AF] trainsition colors duration-200" onClick={resetCoordinates}>✖</button>
                 </Dialog.Close>
                 <Dialog.Title className="text-3xl text-primary font-bold mb-3">Coordinate System</Dialog.Title>
                 <Dialog.Description className="text-sm text-[#9CA3AF] mb-7.5">
