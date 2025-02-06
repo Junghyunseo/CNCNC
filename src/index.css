@@ -68,7 +68,10 @@ button:focus-visible {
 }
 
 
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/preflight"
 @tailwind utilities;
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #60A5FA;
+}

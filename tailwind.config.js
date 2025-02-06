@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],  // ✅ content 배열 최신화!
+module.exports = {
+    content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          primary: {
+            DEFAULT: "#3b82f6", // 기본 primary 색상 (Tailwind의 blue-500)
+            light: "#60a5fa",  // 밝은 톤 (blue-400)
+            dark: "#1e40af",   // 어두운 톤 (blue-900)
+          },
+        },
+      },
     },
-    safelist: [
-      "text-[22px]", 
-      "text-[#60A5FA]", 
-      "w-[100px]", 
-      "p-[12px]"
-    ],
+    plugins: [],
   };
-  
