@@ -1,6 +1,6 @@
 import HomeOptions from '../components/HomeOptions/HomeOptions';
 import '../App.css';
-import CoordinateSystemModal from '../components/modals/CoordinateSystemModal';
+import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/CoordinateSystemModal';
 
 const MDI = () => {
 
