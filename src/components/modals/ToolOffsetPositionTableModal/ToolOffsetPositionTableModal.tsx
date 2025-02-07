@@ -21,10 +21,10 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 <Dialog.Close asChild>
                 <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-[#9CA3AF] trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Coordinate System</Dialog.Title>
-                <Dialog.Description className="text-sm text-[#9CA3AF] mb-7.5">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Tool Offset/Position Table</Dialog.Title>
+                <Dialog.Description className="text-sm text-[#9CA3AF]">
                     Adjust the tool offset and position settings for your CNC machine.
-                </Dialog.Description>
+                </Dialog.Description>s
 
                 <div className="grid grid-cols-7 gap-4 mt-[15px]">
                     {/* 테이블 헤더 (Offset 2개 + Position 4개) */}
