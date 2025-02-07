@@ -2,6 +2,7 @@ import HomeOptions from '../components/HomeOptions/HomeOptions';
 import '../App.css';
 import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/CoordinateSystemModal';
 import ToolOffsetPositionTableModal from '../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal';
+import ToolLengthSensorPositionErrorTableModal from '../components/modals/ToolLengthSensorPositionErrorTableModal/ToolLengthSensorPositionErrorTableModal';
 import SpindleControlModal from '../components/modals/SpindleControlModal/SpindleControlModal';
 import parkingOptionModal from '../components/modals/ParkingOptionModal/ParkingOptionModal';
 
@@ -22,7 +23,7 @@ const Home = () => {
       <HomeOptions
         icon={<span>📏</span>}
         title="Tool Length Sensor Position/Error Table"
-        ModalComponent={CoordinateSystemModal}
+        ModalComponent={ToolLengthSensorPositionErrorTableModal}
       />
       <HomeOptions
         icon={<span>🔄</span>}
