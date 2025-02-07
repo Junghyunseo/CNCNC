@@ -2,6 +2,7 @@ import HomeOptions from '../components/HomeOptions/HomeOptions';
 import '../App.css';
 import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/CoordinateSystemModal';
 import ToolOffsetPositionTableModal from '../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal';
+import SpindleControlModal from '../components/modals/SpindleControlModal/SpindleControlModal';
 
 const Home = () => {
 
@@ -25,7 +26,7 @@ const Home = () => {
       <HomeOptions
         icon={<span>🔄</span>}
         title="Spindle Control"
-        ModalComponent={CoordinateSystemModal}
+        ModalComponent={SpindleControlModal}
       />
       <HomeOptions
         icon={<span>🛑</span>}

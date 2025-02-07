@@ -24,7 +24,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 <Dialog.Title className="text-3xl text-primary font-bold mb-3">Tool Offset/Position Table</Dialog.Title>
                 <Dialog.Description className="text-sm text-[#9CA3AF]">
                     Adjust the tool offset and position settings for your CNC machine.
-                </Dialog.Description>s
+                </Dialog.Description>
 
                 <div className="grid grid-cols-7 gap-4 mt-[15px]">
                     {/* 테이블 헤더 (Offset 2개 + Position 4개) */}
@@ -53,7 +53,10 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                             key={`offset-${rowIndex}-${colIndex}`}
                             type="text"
                             value={offsets[rowIndex][colIndex]}
-                            onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
+                            onChange={(e) => {
+                              setOffset(rowIndex, colIndex, e.target.value)
+                              console.log(offsets)
+                            }}
                             className="w-[100px] p-[6px] border border-[#60A5FA] rounded text-center text-[14px] bg-[#1F2937] text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50"
                           />
                         ))}
@@ -64,7 +67,10 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                             key={`position-${rowIndex}-${colIndex}`}
                             type="text"
                             value={positions[rowIndex][colIndex]}
-                            onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
+                            onChange={(e) => {
+                              setPosition(rowIndex, colIndex, e.target.value)
+                              console.log(positions)
+                            }}
                             className="w-[100px] p-[6px] border border-[#60A5FA] rounded text-center text-[14px] bg-[#1F2937] text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50"
                           />
                         ))}
