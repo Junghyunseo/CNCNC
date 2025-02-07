@@ -31,7 +31,7 @@ const parkingOptionModal: React.FC = () => {
                             type="number"
                             value={x}
                             onChange={(e) => setX(Number(e.target.value))}
-                            className="w-full p-[6px] border border-[#60A5FA] rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50 mb-[25px]"
+                            className="w-full p-[6px] border border-[#60A5FA] rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50"
                         />
                     </div>
                                     

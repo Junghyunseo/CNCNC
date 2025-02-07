@@ -19,7 +19,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-[#9CA3AF] trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Tool Offset/Position Table</Dialog.Title>
+                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Spindle Control</Dialog.Title>
                 <Dialog.Description className="text-sm text-[#9CA3AF]">
                     Adjust spindle rotation speed and feed rate.
                 </Dialog.Description>
