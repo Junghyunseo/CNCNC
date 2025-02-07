@@ -3,6 +3,7 @@ import '../App.css';
 import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/CoordinateSystemModal';
 import ToolOffsetPositionTableModal from '../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal';
 import SpindleControlModal from '../components/modals/SpindleControlModal/SpindleControlModal';
+import parkingOptionModal from '../components/modals/ParkingOptionModal/ParkingOptionModal';
 
 const Home = () => {
 
@@ -36,7 +37,7 @@ const Home = () => {
       <HomeOptions
         icon={<span>🅿️</span>}
         title="Parking Options"
-        ModalComponent={CoordinateSystemModal}
+        ModalComponent={parkingOptionModal}
       />
     </div>
   );
