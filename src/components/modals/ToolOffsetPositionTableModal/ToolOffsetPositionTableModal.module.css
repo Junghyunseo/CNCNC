@@ -1,0 +1,168 @@
+/* 모달 배경 (오버레이) */
+.DialogOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 모달 컨텐츠 */
+.DialogContent {
+    background-color: #1F2937;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px; /* 크기 살짝 증가 */
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 모달 제목 */
+.DialogTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    color: #60A5FA;
+}
+
+/* 모달 설명 */
+.DialogDescription {
+    font-size: 14px;
+    color: #9CA3AF;
+    margin-bottom: 50px;
+}
+
+/* 모달 내부 레이아웃 */
+.ModalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+    color: white;
+}
+
+/* 적용 버튼 */
+.ApplyButton {
+    width: 100%;
+    background-color: #60A5FA;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-top: 30px;
+}
+
+.ApplyButton:hover {
+    background-color: #3a7bd5;
+}
+
+/* 닫기 버튼 (X 버튼) */
+.CloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: #9CA3AF;
+    transition: color 0.2s;
+}
+
+.CloseButton:hover {
+    color: #F3F4F6;
+}
+
+/* 모달 애니메이션 */
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* =================== */
+/*    6x3 테이블 스타일  */
+/* =================== */
+/* 테이블 컨테이너 */
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* G54 ~ G59 + X, Y, Z */
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* 테이블 헤더 */
+.GridHeader {
+    display: contents; /* 내부 아이템이 같은 부모 Grid를 공유하도록 설정 */
+}
+
+.GridHeader span {
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    /*border-bottom: 2px solid #374151;*/
+    color: #60A5FA;
+    width: 100px;
+}
+
+/* 각 행 */
+.GridRow {
+    display: contents;
+}
+
+/* G54 ~ G59 라벨 */
+.RowLabel {
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    padding: 8px;
+    background-color: #1F2937;
+    border-radius: 4px;
+    color: #60A5FA;
+}
+
+/* 입력 박스 */
+.GridInput {
+    width: 100px;
+    max-width: 100px; /* 크기 제한 */
+    padding: 6px;
+    border: 1px solid #60A5FA;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #1F2937;
+    color: white;
+}
+
+.GridInput:focus {
+    outline: none;
+    border-color: white;
+    border-width: 2px;
+    box-shadow: 0 0 5px rgba(96, 165, 250, 0.5);
+}

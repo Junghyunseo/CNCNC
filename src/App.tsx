@@ -1,12 +1,12 @@
 import React from 'react';
-import MDI from './pages/MDI'; // MDI 경로 맞춰서 import
+import Home from './pages/Home'; // MDI 경로 맞춰서 import
 import './App.css';
 import './index.css';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <MDI />
+      <Home />
       <div className="w-96 bg-white shadow rounded m-5">w-96</div>
       <div className="w-80 bg-white shadow rounded m-5">w-80</div>
       <div className="w-72 bg-white shadow rounded m-5">w-72</div>
