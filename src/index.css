@@ -77,4 +77,9 @@ button:focus-visible {
   --color-backgroundPrimary: #1F2937;
   --color-description: #9CA3AF;
   --color-buttonHover: #3A7BD5;
+
+  --spacing-titleBottomMargin: 12px;
+  --spacing-descriptionBottomMargin: 32px;
+  --spacing-gridGap: 16px;
+  --spacing-applyButtonTopMargin: 32px;
 }

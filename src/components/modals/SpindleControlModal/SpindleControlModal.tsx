@@ -19,15 +19,15 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Spindle Control</Dialog.Title>
-                <Dialog.Description className="text-sm text-description">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Spindle Control</Dialog.Title>
+                <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Adjust spindle rotation speed and feed rate.
                 </Dialog.Description>
 
-                <div className="text-primary text-sm flex flex-col gap-[15px] mt-[25px]">
-                    <div>
+                <div className="text-primary text-sm flex flex-col gap-[15px]">
+                    <div className="flex flex-col gap-gridGap">
                         <label>Rotation Speed (RPM): </label>
-                        <div className="flex flex-col gap-[5px]">
+                        <div className="flex flex-col gap-gridGap">
                             <input
                                 type="number"
                                 value={rotationSpeed}
@@ -36,7 +36,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                             />
                         </div>
                     </div>
-                    <div>
+                    <div className="flex flex-col gap-gridGap">
                         <label>Feed Rate (mm/min): </label>
                         <div>
                             <input
@@ -49,7 +49,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                     </div>
                 </div>
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">Apply</button>
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
         </Dialog.Portal>

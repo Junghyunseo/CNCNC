@@ -21,12 +21,12 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 <Dialog.Close asChild>
                 <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Tool Offset/Position Table</Dialog.Title>
-                <Dialog.Description className="text-sm text-description">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Tool Offset/Position Table</Dialog.Title>
+                <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Adjust the tool offset and position settings for your CNC machine.
                 </Dialog.Description>
 
-                <div className="grid grid-cols-7 gap-4 mt-[15px]">
+                <div className="grid grid-cols-7 gap-gridGap">
                     {/* 테이블 헤더 (Offset 2개 + Position 4개) */}
                     <div className="contents">
                       <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">Tool Index</span>
@@ -80,7 +80,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 </div>
 
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">Apply</button>
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
         </Dialog.Portal>

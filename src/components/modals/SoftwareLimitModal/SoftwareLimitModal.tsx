@@ -14,13 +14,13 @@ const SoftwareLimitModal: React.FC = () => {
                         ✖
                     </button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">
                     Software Limit
                 </Dialog.Title>
-                <Dialog.Description className="text-sm text-description mb-7">
+                <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Set software limits for X, Y, and Z axes.
                 </Dialog.Description>
-                <div className="grid grid-cols-4 gap-4 mt-[15px]">
+                <div className="grid grid-cols-4 gap-gridGap">
                     <div className="contents">
                         <span className="font-bold text-center text-[#50A5FA] w-[70px]">Axis</span>
                         <span className="font-bold text-center text-[#50A5FA] w-[70px]">Min</span>
@@ -51,7 +51,7 @@ const SoftwareLimitModal: React.FC = () => {
                     ))}
                 </div>
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">
                         Apply
                     </button>
                 </div>

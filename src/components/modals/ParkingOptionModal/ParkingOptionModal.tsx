@@ -19,12 +19,12 @@ const parkingOptionModal: React.FC = () => {
                         ✖
                     </button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Parking Options</Dialog.Title>
-                <Dialog.Description className="text-sm text-description">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Parking Options</Dialog.Title>
+                <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Set the parking coordinates for your CNC machine.
                 </Dialog.Description>
 
-                <div className="text-primary text-sm flex flex-col gap-[15px] mt-[25px]">
+                <div className="text-primary text-sm flex flex-col gap-gridGap">
                     <div className="flex flex-row items-center gap-[10px]">
                         <div className="w-[30px] font-bold text-right">X</div>
                         <input
@@ -56,7 +56,7 @@ const parkingOptionModal: React.FC = () => {
                     </div>
                 </div>
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">Apply</button>
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
         </Dialog.Portal>

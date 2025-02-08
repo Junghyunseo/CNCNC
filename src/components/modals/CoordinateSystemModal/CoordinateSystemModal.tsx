@@ -12,12 +12,12 @@ const CoordinateSystemModal: React.FC = () => {
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetCoordinates}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-3">Coordinate System</Dialog.Title>
-                <Dialog.Description className="text-sm text-description mb-7.5">
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Coordinate System</Dialog.Title>
+                <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Adjust the coordinate system settings for your CNC machine.
                 </Dialog.Description>
 
-                <div className="grid grid-cols-4 gap-4 mt-[15px]">
+                <div className="grid grid-cols-4 gap-gridGap">
                     <div className="contents">
                         <span></span> {/* 빈 칸 */}
                         <span className="font-bold text-center text-primary w-[70px]">X</span>
@@ -41,7 +41,7 @@ const CoordinateSystemModal: React.FC = () => {
                     ))}
                 </div>
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">Apply</button>
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
         </Dialog.Portal>
