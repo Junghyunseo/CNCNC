@@ -4,6 +4,7 @@ import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/Co
 import ToolOffsetPositionTableModal from '../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal';
 import ToolLengthSensorPositionErrorTableModal from '../components/modals/ToolLengthSensorPositionErrorTableModal/ToolLengthSensorPositionErrorTableModal';
 import SpindleControlModal from '../components/modals/SpindleControlModal/SpindleControlModal';
+import SoftwareLimitModal from '../components/modals/SoftwareLimitModal/SoftwareLimitModal';
 import parkingOptionModal from '../components/modals/ParkingOptionModal/ParkingOptionModal';
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
       <HomeOptions
         icon={<span>🛑</span>}
         title="Software Limit"
-        ModalComponent={CoordinateSystemModal}
+        ModalComponent={SoftwareLimitModal}
       />
       <HomeOptions
         icon={<span>🅿️</span>}
