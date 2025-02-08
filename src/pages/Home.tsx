@@ -10,7 +10,7 @@ import parkingOptionModal from '../components/modals/ParkingOptionModal/ParkingO
 const Home = () => {
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center items-center gap-6 p-6">
       <HomeOptions
         icon={<span>🌐</span>}
         title="Coordinate System"
