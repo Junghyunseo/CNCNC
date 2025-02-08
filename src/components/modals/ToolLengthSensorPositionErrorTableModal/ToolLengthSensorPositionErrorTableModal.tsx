@@ -17,12 +17,12 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-[#1F2937] p-6 rounded-lg border border-white max-w-[1000px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[1000px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
-                    <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-[#9CA3AF] trainsition colors duration-200" onClick={resetAll}>✖</button>
+                    <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
                 <Dialog.Title className="text-3xl text-primary font-bold mb-3">Tool Length Sensor Position/Error Table</Dialog.Title>
-                <Dialog.Description className="text-sm text-[#9CA3AF] mb-7.5">
+                <Dialog.Description className="text-sm text-description mb-7.5">
                     Adjust the tool length senseor position and error for your CNC machine.
                 </Dialog.Description>
 
@@ -39,7 +39,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
 
                     {[...Array(6)].map((_, rowIndex) => (
                         <div className="contents" key={rowIndex}>
-                            <span className="font-bold text-center w-[100px] p-2 bg-[#1F2937] rounded text-[#60A5FA]">
+                            <span className="font-bold text-center w-[100px] p-2 bg-backgroundPrimary rounded text-primary">
                               {rowIndex + 1}
                             </span>
                             {[0, 1, 2, 3].map((colIndex) => (
@@ -48,7 +48,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={positions[rowIndex][colIndex]}
                                     onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-[#60A5FA] rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50"
+                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
                                 />
                             ))}
 
@@ -58,7 +58,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={offsets[rowIndex][colIndex]}
                                     onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-[#60A5FA] rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-[#60A5FA]/50"
+                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
                                 />
                             ))}
                         </div>
@@ -66,7 +66,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                 </div>
 
                 <div>
-                    <button className="w-full bg-[#60A5FA] text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-[#3A7BD5]">Apply</button>
+                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-7 hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
         </Dialog.Portal>
