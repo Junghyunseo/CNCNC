@@ -27,20 +27,20 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 </Dialog.Description>
 
                 <div className="flex justify-center">
-                  <div className="grid" style={{ gridTemplateColumns: "90px repeat(6, 85px)", gap: "8px 16px" }}>
+                  <div className="grid" style={{ gridTemplateColumns: "60px repeat(6, 85px)", gap: "8px 16px" }}>
                       {/* 테이블 헤더 */}
-                      <span className="font-bold text-center p-2 text-primary w-[90px] border-b-2 border-gray-600 flex items-end justify-center">Tool Index</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">Tool Length</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">Tool Radius</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">X</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">Y</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">Zh</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] border-b-2 border-gray-600 flex items-end justify-center">Zl</span>
+                      <span className="font-bold text-center p-2 text-primary w-[70px] flex items-end justify-center">Tool Index</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Tool Length</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Tool Radius</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">X</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Y</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Zh</span>
+                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Zl</span>
 
                       {/* 각 행 (6개의 Tool) */}
                       {[...Array(6)].map((_, rowIndex) => (
                           <React.Fragment key={rowIndex}>
-                              <span className="font-bold text-center w-[90px] p-2 bg-backgroundPrimary rounded text-primary">
+                              <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
                                   {rowIndex + 1}
                               </span>
                       

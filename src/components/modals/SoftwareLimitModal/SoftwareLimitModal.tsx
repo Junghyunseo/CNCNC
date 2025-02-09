@@ -21,13 +21,13 @@ const SoftwareLimitModal: React.FC = () => {
                     Set software limits for X, Y, and Z axes.
                 </Dialog.Description>
                 <div className="flex justify-center">
-                    <div className="grid" style={{ gridTemplateColumns: "70px 80px 50px 80px 50px", gap: "8px 16px" }}>
+                    <div className="grid" style={{ gridTemplateColumns: "50px 70px 50px 70px 50px", gap: "8px 16px" }}>
                         {/* 테이블 헤더 */}
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Axis</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[80px] border-b-2 border-gray-600 p-2">Min</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[50px] border-b-2 border-gray-600 p-2">Unit</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[80px] border-b-2 border-gray-600 p-2">Max</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[50px] border-b-2 border-gray-600 p-2">Unit</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] p-2">Axis</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[80px] p-2">Min</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[50px] p-2"></span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[80px] p-2">Max</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[50px] p-2"></span>
 
                         {/* 데이터 행 */}
                         {["X", "Y", "Z"].map((label, index) => (
@@ -41,7 +41,7 @@ const SoftwareLimitModal: React.FC = () => {
                                     onChange={(e) => setLimit(index, "min", e.target.value)}
                                     className="w-[80px] p-[4px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
-                                <span className="font-bold text-center w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400">
+                                <span className="font-bold w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400 text-left">
                                     mm
                                 </span>
                                 <input

@@ -27,15 +27,15 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                 </Dialog.Description>
 
                 <div className="flex justify-center">
-                    <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, 70px)", gap: "8px 16px" }}>
+                    <div className="grid" style={{ gridTemplateColumns: "60px repeat(6, 70px)", gap: "8px 16px" }}>
                         {/* 테이블 헤더 */}
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Tool Index</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">X</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Y</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Zh</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Zl</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Error(+)</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Error(-)</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Tool Index</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">X</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Y</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Zh</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Zl</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Error(+)</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Error(-)</span>
 
                         {/* 데이터 행 */}
                         {[...Array(6)].map((_, rowIndex) => (
