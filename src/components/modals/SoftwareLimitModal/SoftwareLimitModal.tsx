@@ -8,7 +8,7 @@ const SoftwareLimitModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" />
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[400px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[450px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] text-gray-400 hover:text-gray-300 transition-colors duration-200" onClick={resetLimits}>
                         ✖
@@ -20,36 +20,44 @@ const SoftwareLimitModal: React.FC = () => {
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Set software limits for X, Y, and Z axes.
                 </Dialog.Description>
-                <div className="grid grid-cols-4 gap-gridGap">
-                    <div className="contents">
+                <div className="flex justify-center">
+                    <div className="grid" style={{ gridTemplateColumns: "70px 80px 50px 80px 50px", gap: "8px 16px" }}>
+                        {/* 테이블 헤더 */}
                         <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Axis</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Min</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Max</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Unit</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[80px] border-b-2 border-gray-600 p-2">Min</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[50px] border-b-2 border-gray-600 p-2">Unit</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[80px] border-b-2 border-gray-600 p-2">Max</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[50px] border-b-2 border-gray-600 p-2">Unit</span>
+
+                        {/* 데이터 행 */}
+                        {["X", "Y", "Z"].map((label, index) => (
+                            <React.Fragment key={index}>
+                                <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
+                                    {label}
+                                </span>
+                                <input
+                                    type="number"
+                                    value={limits[index].min}
+                                    onChange={(e) => setLimit(index, "min", e.target.value)}
+                                    className="w-[80px] p-[4px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                />
+                                <span className="font-bold text-center w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400">
+                                    mm
+                                </span>
+                                <input
+                                    type="number"
+                                    value={limits[index].max}
+                                    onChange={(e) => setLimit(index, "max", e.target.value)}
+                                    className="w-[80px] p-[4px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                />
+                                <span className="font-bold text-center w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400">
+                                    mm
+                                </span>
+                            </React.Fragment>
+                        ))}
                     </div>
-                    {["X", "Y", "Z"].map((label, index) => (
-                        <div className="contents" key={index}>
-                            <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
-                                {label}
-                            </span>
-                            <input
-                                type="number"
-                                value={limits[index].min}
-                                onChange={(e) => setLimit(index, "min", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            />
-                            <input
-                                type="number"
-                                value={limits[index].max}
-                                onChange={(e) => setLimit(index, "max", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            />
-                            <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-gray-400">
-                                mm
-                            </span>
-                        </div>
-                    ))}
                 </div>
+
                 <div>
                     <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">
                         Apply
