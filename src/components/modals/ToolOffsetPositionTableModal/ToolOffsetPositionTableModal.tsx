@@ -17,9 +17,9 @@ const ToolOffsetPositionTableModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" />
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[800px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[40%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
-                <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
+                <button className="absolute top-[2%] right-[2%] bg-transparent border-none text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
                 <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Tool Offset & Position Table</Dialog.Title>
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
@@ -27,20 +27,20 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 </Dialog.Description>
 
                 <div className="flex justify-center">
-                  <div className="grid" style={{ gridTemplateColumns: "60px repeat(6, 85px)", gap: "8px 16px" }}>
+                  <div className="grid" style={{ gridTemplateColumns: "9% repeat(6, 12.5%)", gap: "8px 12px" }}>
                       {/* 테이블 헤더 */}
-                      <span className="font-bold text-center p-2 text-primary w-[70px] flex items-end justify-center">Tool Index</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Tool Length</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Tool Radius</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">X</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Y</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Zh</span>
-                      <span className="font-bold text-center p-2 text-primary w-[85px] flex items-end justify-center">Zl</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Index</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Length</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Radius</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">X</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Y</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Zh</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Zl</span>
 
                       {/* 각 행 (6개의 Tool) */}
                       {[...Array(6)].map((_, rowIndex) => (
                           <React.Fragment key={rowIndex}>
-                              <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
+                              <span className="font-bold text-center p-2 bg-backgroundPrimary rounded text-primary">
                                   {rowIndex + 1}
                               </span>
                       
@@ -53,7 +53,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                                       onChange={(e) => {
                                           setOffset(rowIndex, colIndex, e.target.value);
                                       }}
-                                      className="w-[85px] p-[4px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                      className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                   />
                               ))}
 
@@ -66,7 +66,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                                       onChange={(e) => {
                                           setPosition(rowIndex, colIndex, e.target.value);
                                       }}
-                                      className="w-[85px] p-[4px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                      className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                   />
                               ))}
                           </React.Fragment>

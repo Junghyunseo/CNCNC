@@ -17,9 +17,9 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[700px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[35%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
-                    <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
+                    <button className="absolute top-[2%] right-[2%] bg-transparent border-none text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
                 <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Tool Length Sensor Position & Error Table</Dialog.Title>
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
@@ -27,20 +27,20 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                 </Dialog.Description>
 
                 <div className="flex justify-center">
-                    <div className="grid" style={{ gridTemplateColumns: "60px repeat(6, 70px)", gap: "8px 16px" }}>
+                    <div className="grid" style={{ gridTemplateColumns: "9% repeat(6, 12.5%)", gap: "8px 16px" }}>
                         {/* 테이블 헤더 */}
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Tool Index</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">X</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Y</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Zh</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Zl</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Error(+)</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] flex items-end justify-center">Error(-)</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Tool Index</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">X</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Y</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Zh</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Zl</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Error(+)</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Error(-)</span>
 
                         {/* 데이터 행 */}
                         {[...Array(6)].map((_, rowIndex) => (
                             <React.Fragment key={rowIndex}>
-                                <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
+                                <span className="font-bold text-center w-[100%] p-2 bg-backgroundPrimary rounded text-primary">
                                   {rowIndex + 1}
                                 </span>
                                 {[0, 1, 2, 3].map((colIndex) => (
@@ -49,7 +49,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                         type="number"
                                         value={positions[rowIndex][colIndex]}
                                         onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                        className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                     />
                                 ))}
                                 {[0, 1].map((colIndex) => (
@@ -58,7 +58,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                         type="number"
                                         value={offsets[rowIndex][colIndex]}
                                         onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                        className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                     />
                                 ))}
                             </React.Fragment>
