@@ -17,7 +17,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[1000px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[700px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
@@ -26,45 +26,45 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                     Adjust the tool length senseor position and error for your CNC machine.
                 </Dialog.Description>
 
-                <div className="grid grid-cols-7 gap-gridGap">
-                    <div className="contents">
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Tool Index</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">X</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Y</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Zh</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Zl</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Error(+)</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Error(-)</span>
+                <div className="flex justify-center">
+                    <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, 70px)", gap: "8px 16px" }}>
+                        {/* 테이블 헤더 */}
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Tool Index</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">X</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Y</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Zh</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Zl</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Error(+)</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[70px] border-b-2 border-gray-600 flex items-end justify-center">Error(-)</span>
+
+                        {/* 데이터 행 */}
+                        {[...Array(6)].map((_, rowIndex) => (
+                            <React.Fragment key={rowIndex}>
+                                <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
+                                  {rowIndex + 1}
+                                </span>
+                                {[0, 1, 2, 3].map((colIndex) => (
+                                    <input
+                                        key={`position-${rowIndex}-${colIndex}`}
+                                        type="number"
+                                        value={positions[rowIndex][colIndex]}
+                                        onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
+                                        className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    />
+                                ))}
+                                {[0, 1].map((colIndex) => (
+                                    <input
+                                        key={`offset-${rowIndex}-${colIndex}`}
+                                        type="number"
+                                        value={offsets[rowIndex][colIndex]}
+                                        onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
+                                        className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    />
+                                ))}
+                            </React.Fragment>
+                        ))}
                     </div>
-
-                    {[...Array(6)].map((_, rowIndex) => (
-                        <div className="contents" key={rowIndex}>
-                            <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
-                              {rowIndex + 1}
-                            </span>
-                            {[0, 1, 2, 3].map((colIndex) => (
-                                <input
-                                    key={`position-${rowIndex}-${colIndex}`}
-                                    type="number"
-                                    value={positions[rowIndex][colIndex]}
-                                    onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                                />
-                            ))}
-
-                            {[0, 1].map((colIndex) => (
-                                <input
-                                    key={`offset-${rowIndex}-${colIndex}`}
-                                    type="number"
-                                    value={offsets[rowIndex][colIndex]}
-                                    onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                                />
-                            ))}
-                        </div>
-                    ))}
                 </div>
-
                 <div>
                     <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>

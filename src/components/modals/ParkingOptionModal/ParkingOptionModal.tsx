@@ -7,7 +7,7 @@ const parkingOptionModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" />
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[500px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[400px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button
                         className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200"
@@ -23,38 +23,24 @@ const parkingOptionModal: React.FC = () => {
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Set the parking coordinates for your CNC machine.
                 </Dialog.Description>
-
-                <div className="text-primary text-sm flex flex-col gap-gridGap">
-                    <div className="flex flex-row items-center gap-[10px]">
-                        <div className="w-[30px] font-bold text-right">X</div>
-                        <input
-                            type="number"
-                            value={x}
-                            onChange={(e) => setX(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                        />
-                    </div>
-                                    
-                    <div className="flex flex-row items-center gap-[10px]">
-                        <div className="w-[30px] font-bold text-right">Y</div>
-                        <input
-                            type="number"
-                            value={y}
-                            onChange={(e) => setY(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                        />
-                    </div>
-                                    
-                    <div className="flex flex-row items-center gap-[10px]">
-                        <div className="w-[30px] font-bold text-right">Z</div>
-                        <input
-                            type="number"
-                            value={z}
-                            onChange={(e) => setZ(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                        />
-                    </div>
+                <div className="text-primary text-sm flex flex-col gap-[8px] pr-6">
+                    {[
+                        { label: "X", value: x, setValue: setX },
+                        { label: "Y", value: y, setValue: setY },
+                        { label: "Z", value: z, setValue: setZ },
+                    ].map(({ label, value, setValue }) => (
+                        <div key={label} className="flex flex-row items-center justify-center gap-[10px]">
+                            <div className="w-[40px] font-bold text-center">{label}</div>
+                            <input
+                                type="number"
+                                value={value}
+                                onChange={(e) => setValue(Number(e.target.value))}
+                                className="w-[250px] p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            />
+                        </div>
+                    ))}
                 </div>
+                
                 <div>
                     <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>

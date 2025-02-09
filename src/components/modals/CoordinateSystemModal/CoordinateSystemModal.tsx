@@ -8,7 +8,7 @@ const CoordinateSystemModal: React.FC = () => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[500px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[400px] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetCoordinates}>✖</button>
                 </Dialog.Close>
@@ -17,7 +17,7 @@ const CoordinateSystemModal: React.FC = () => {
                     Adjust the coordinate system settings for your CNC machine.
                 </Dialog.Description>
 
-                <div className="grid grid-cols-4 gap-gridGap">
+                <div className="grid grid-cols-4 gap-gridGap pr-12">
                     <div className="contents">
                         <span></span> {/* 빈 칸 */}
                         <span className="font-bold text-center p-2 text-primary w-[70px] border-b-2 border-gray-600">X</span>
