@@ -20,9 +20,9 @@ const CoordinateSystemModal: React.FC = () => {
                 <div className="grid grid-cols-4 gap-gridGap">
                     <div className="contents">
                         <span></span> {/* 빈 칸 */}
-                        <span className="font-bold text-center text-primary w-[70px]">X</span>
-                        <span className="font-bold text-center text-primary w-[70px]">Y</span>
-                        <span className="font-bold text-center text-primary w-[70px]">Z</span>
+                        <span className="font-bold text-center p-2 text-primary w-[70px] border-b-2 border-gray-600">X</span>
+                        <span className="font-bold text-center p-2 text-primary w-[70px] border-b-2 border-gray-600">Y</span>
+                        <span className="font-bold text-center p-2 text-primary w-[70px] border-b-2 border-gray-600">Z</span>
                     </div>
 
                     {['G54', 'G55', 'G56', 'G57', 'G58', 'G59'].map((label, rowIndex) => (

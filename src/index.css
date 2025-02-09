@@ -80,6 +80,6 @@ button:focus-visible {
 
   --spacing-titleBottomMargin: 12px;
   --spacing-descriptionBottomMargin: 32px;
-  --spacing-gridGap: 16px;
+  --spacing-gridGap: 12px;
   --spacing-applyButtonTopMargin: 32px;
 }

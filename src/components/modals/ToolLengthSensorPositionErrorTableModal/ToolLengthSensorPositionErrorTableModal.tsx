@@ -28,18 +28,18 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
 
                 <div className="grid grid-cols-7 gap-gridGap">
                     <div className="contents">
-                        <span className="font-bold text-right text-[#50A5FA] w-[70px]">Tool Index</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">X</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Y</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Zh</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Zl</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Error(+)</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Error(-)</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Tool Index</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">X</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Y</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Zh</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Zl</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Error(+)</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600">Error(-)</span>
                     </div>
 
                     {[...Array(6)].map((_, rowIndex) => (
                         <div className="contents" key={rowIndex}>
-                            <span className="font-bold text-center w-[100px] p-2 bg-backgroundPrimary rounded text-primary">
+                            <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-primary">
                               {rowIndex + 1}
                             </span>
                             {[0, 1, 2, 3].map((colIndex) => (
@@ -48,7 +48,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={positions[rowIndex][colIndex]}
                                     onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                                 />
                             ))}
 
@@ -58,7 +58,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={offsets[rowIndex][colIndex]}
                                     onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                                 />
                             ))}
                         </div>

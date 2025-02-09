@@ -22,10 +22,10 @@ const SoftwareLimitModal: React.FC = () => {
                 </Dialog.Description>
                 <div className="grid grid-cols-4 gap-gridGap">
                     <div className="contents">
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Axis</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Min</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Max</span>
-                        <span className="font-bold text-center text-[#50A5FA] w-[70px]">Unit</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Axis</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Min</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Max</span>
+                        <span className="font-bold text-center text-[#50A5FA] w-[70px] border-b-2 border-gray-600 p-2">Unit</span>
                     </div>
                     {["X", "Y", "Z"].map((label, index) => (
                         <div className="contents" key={index}>

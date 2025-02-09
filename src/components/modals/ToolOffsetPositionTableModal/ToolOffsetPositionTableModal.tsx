@@ -35,7 +35,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                       <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">X</span>
                       <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">Y</span>
                       <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">Zh</span>
-                      <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">Rl</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100px] border-b-2 border-gray-600">Zl</span>
                     </div>
 
 
