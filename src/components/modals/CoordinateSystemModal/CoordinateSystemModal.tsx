@@ -31,10 +31,10 @@ const CoordinateSystemModal: React.FC = () => {
                             {['X', 'Y', 'Z'].map((_, colIndex) => (
                                 <input
                                     key={`${rowIndex}-${colIndex}`}
-                                    type="text"
+                                    type="number"
                                     value={coordinates[rowIndex][colIndex]}
                                     onChange={(e) => setCoordinate(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                             ))}
                         </div>

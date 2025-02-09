@@ -18,12 +18,12 @@ const Home = () => {
       />
       <HomeOptions
         icon={<span>🔧</span>}
-        title="Tool Offset/Position Table"
+        title="Tool Offset & Position Table"
         ModalComponent={ToolOffsetPositionTableModal}
       />
       <HomeOptions
         icon={<span>📏</span>}
-        title="Tool Length Sensor Position/Error Table"
+        title="Tool Length Sensor Position & Error Table"
         ModalComponent={ToolLengthSensorPositionErrorTableModal}
       />
       <HomeOptions

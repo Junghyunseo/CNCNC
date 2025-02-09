@@ -32,7 +32,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={rotationSpeed}
                                 onChange={(e) => setRotationSpeed(Number(e.target.value))}
-                                className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={feedRate}
                                 onChange={(e) => setFeedRate(Number(e.target.value))}
-                                className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                         </div>
                     </div>

@@ -33,16 +33,16 @@ const SoftwareLimitModal: React.FC = () => {
                                 {label}
                             </span>
                             <input
-                                type="text"
+                                type="number"
                                 value={limits[index].min}
                                 onChange={(e) => setLimit(index, "min", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                             <input
-                                type="text"
+                                type="number"
                                 value={limits[index].max}
                                 onChange={(e) => setLimit(index, "max", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                             <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-gray-400">
                                 mm

@@ -21,7 +21,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent border-none text-[15px] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Tool Length Sensor Position/Error Table</Dialog.Title>
+                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Tool Length Sensor Position & Error Table</Dialog.Title>
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Adjust the tool length senseor position and error for your CNC machine.
                 </Dialog.Description>
@@ -45,20 +45,20 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                             {[0, 1, 2, 3].map((colIndex) => (
                                 <input
                                     key={`position-${rowIndex}-${colIndex}`}
-                                    type="text"
+                                    type="number"
                                     value={positions[rowIndex][colIndex]}
                                     onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                             ))}
 
                             {[0, 1].map((colIndex) => (
                                 <input
                                     key={`offset-${rowIndex}-${colIndex}`}
-                                    type="text"
+                                    type="number"
                                     value={offsets[rowIndex][colIndex]}
                                     onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
+                                    className="w-[70px] max-w-[70px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                             ))}
                         </div>
