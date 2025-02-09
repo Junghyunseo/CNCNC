@@ -31,7 +31,7 @@ const parkingOptionModal: React.FC = () => {
                             type="number"
                             value={x}
                             onChange={(e) => setX(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                         />
                     </div>
                                     
@@ -41,7 +41,7 @@ const parkingOptionModal: React.FC = () => {
                             type="number"
                             value={y}
                             onChange={(e) => setY(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                         />
                     </div>
                                     
@@ -51,7 +51,7 @@ const parkingOptionModal: React.FC = () => {
                             type="number"
                             value={z}
                             onChange={(e) => setZ(Number(e.target.value))}
-                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                            className="w-full p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                         />
                     </div>
                 </div>

@@ -57,7 +57,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                               setOffset(rowIndex, colIndex, e.target.value)
                               console.log(offsets)
                             }}
-                            className="w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                            className="w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                           />
                         ))}
 
@@ -71,7 +71,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                               setPosition(rowIndex, colIndex, e.target.value)
                               console.log(positions)
                             }}
-                            className="w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                            className="w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                           />
                         ))}
                       </div>

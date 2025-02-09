@@ -48,7 +48,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={positions[rowIndex][colIndex]}
                                     onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                                 />
                             ))}
 
@@ -58,7 +58,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                     type="text"
                                     value={offsets[rowIndex][colIndex]}
                                     onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                                    className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                                 />
                             ))}
                         </div>

@@ -36,13 +36,13 @@ const SoftwareLimitModal: React.FC = () => {
                                 type="text"
                                 value={limits[index].min}
                                 onChange={(e) => setLimit(index, "min", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                             />
                             <input
                                 type="text"
                                 value={limits[index].max}
                                 onChange={(e) => setLimit(index, "max", e.target.value)}
-                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md focus:shadow-primary/50"
+                                className="w-[70px] max-w-[100px] p-[6px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md"
                             />
                             <span className="font-bold text-center w-[70px] p-2 bg-backgroundPrimary rounded text-gray-400">
                                 mm
