@@ -6,8 +6,6 @@ const CoordinateSystemModal: React.FC = () => {
     const { coordinates, setCoordinate, resetCoordinates } = useCoordinateSystemStore();
 
     return (
-        <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-black/60" /> 
             <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[20%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[2%] right-[2%] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetCoordinates}>✖</button>
@@ -44,7 +42,6 @@ const CoordinateSystemModal: React.FC = () => {
                     <button className="w-full bg-primary text-white px-4 py-2 rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
-        </Dialog.Portal>
     );
 };
 

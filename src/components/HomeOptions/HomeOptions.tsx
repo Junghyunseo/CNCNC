@@ -18,8 +18,10 @@ const HomeOptions: React.FC<HomeOptionsProps> = ({ icon, title, ModalComponent }
           </div>
         </button>
       </Dialog.Trigger>
-
-      <ModalComponent />
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 bg-black/60" />
+        <ModalComponent />
+      </Dialog.Portal>
     </Dialog.Root>
   );
 };

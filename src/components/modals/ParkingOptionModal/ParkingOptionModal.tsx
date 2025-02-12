@@ -5,8 +5,6 @@ import { useParkingOptionsStore } from '../../../store/parkingOptionStore';
 const parkingOptionModal: React.FC = () => {
     const { x, y, z, setX, setY, setZ } = useParkingOptionsStore();
     return (
-        <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-black/60" />
             <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[32%] max-w-[20%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button
@@ -45,7 +43,6 @@ const parkingOptionModal: React.FC = () => {
                     <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
-        </Dialog.Portal>
     );
 };
 
