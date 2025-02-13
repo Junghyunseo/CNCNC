@@ -46,8 +46,8 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button className="h-[3vh] w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
+                <div className="w-[100%] h-[120%] mx-auto flex flex-col justify-between">
+                    <button className="h-[10%] w-full bg-primary text-white px-4 py-2 rounded-md cursor-pointer text-[1.3em] font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover flex items-center justify-center text-center">Apply</button>
                 </div>
             </Dialog.Content>
     );
