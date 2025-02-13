@@ -13,7 +13,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
     };
 
     return (
-            <Dialog.Content className="text-[100%] fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[35%] w-[20%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-inv">
+            <Dialog.Content className="text-[100%] fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[36vh] w-[20vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-inv">
                 <Dialog.Close asChild>
                     <button className="absolute top-[2%] right-[2%] bg-transparent border-none text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
@@ -30,7 +30,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={rotationSpeed}
                                 onChange={(e) => setRotationSpeed(Number(e.target.value))}
-                                className="h-full w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
+                                className="h-[3.5vh] w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
                             />
                         </div>
                     </div>
@@ -41,13 +41,13 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={feedRate}
                                 onChange={(e) => setFeedRate(Number(e.target.value))}
-                                className="h-[35px] w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
+                                className="h-[3.5vh] w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
                             />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <button className="w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
+                    <button className="h-[3vh] w-full bg-primary text-white px-4 py-2 border-none rounded-md cursor-pointer text-xs font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover">Apply</button>
                 </div>
             </Dialog.Content>
     );
