@@ -63,8 +63,8 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-[100%] h-[80%] mx-auto flex flex-col justify-between">
-                    <button className="h-[10%] w-full bg-primary text-white px-4 py-2 rounded-md cursor-pointer text-[130%] font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover flex items-center justify-center text-center">Apply</button>
+                <div className="w-[100%] h-full mx-auto flex flex-col justify-between">
+                    <button className="h-[8%] w-full bg-primary text-white px-4 py-2 rounded-md cursor-pointer text-[130%] font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover flex items-center justify-center text-center">Apply</button>
                 </div>
             </Dialog.Content>
     );
