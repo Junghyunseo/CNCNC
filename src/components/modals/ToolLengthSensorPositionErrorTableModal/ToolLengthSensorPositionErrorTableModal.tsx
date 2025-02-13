@@ -15,7 +15,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
     };
 
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[52.5vh] w-[40vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[51.5vh] w-[40vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                 <button className="absolute top-[10px] right-[10px] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}><svg
                         width="20"
@@ -41,7 +41,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                 <div className="flex justify-center">
                     <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, 12.5%)", gap: "8px 12px" }}>
                         {/* 테이블 헤더 */}
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Tool Index</span>
+                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Index</span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">X</span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Y</span>
                         <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Z<sub className="text-xs ml-[-1px]">H</sub></span>
@@ -61,7 +61,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                         type="number"
                                         value={positions[rowIndex][colIndex]}
                                         onChange={(e) => setPosition(rowIndex, colIndex, e.target.value)}
-                                        className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        className="w-[100%] p-2 border border-gray-400 rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                     />
                                 ))}
                                 {[0, 1].map((colIndex) => (
@@ -70,7 +70,7 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                                         type="number"
                                         value={offsets[rowIndex][colIndex]}
                                         onChange={(e) => setOffset(rowIndex, colIndex, e.target.value)}
-                                        className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        className="w-[100%] p-2 border border-gray-400 rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                     />
                                 ))}
                             </React.Fragment>

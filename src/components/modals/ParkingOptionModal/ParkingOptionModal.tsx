@@ -5,7 +5,7 @@ import { useParkingOptionsStore } from '../../../store/parkingOptionStore';
 const parkingOptionModal: React.FC = () => {
     const { x, y, z, setX, setY, setZ } = useParkingOptionsStore();
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[31vh] w-[20vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[31.5vh] w-[20vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                 <button className="absolute top-[10px] right-[10px] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={()=>{setX(0),setY(0),setZ(0)}}><svg
                         width="20"
@@ -39,7 +39,7 @@ const parkingOptionModal: React.FC = () => {
                                 type="number"
                                 value={value}
                                 onChange={(e) => setValue(Number(e.target.value))}
-                                className="h-[35px] w-[250px] p-[6px] border border-primary rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                className="h-[35px] w-[250px] p-[6px] border border-gray-400 rounded text-[14px] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                         </div>
                     ))}

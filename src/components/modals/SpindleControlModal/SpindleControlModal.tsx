@@ -45,7 +45,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={rotationSpeed}
                                 onChange={(e) => setRotationSpeed(Number(e.target.value))}
-                                className="flex-1 h-[3.5vh] p-2 border border-primary rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                className="flex-1 h-[3.5vh] p-2 border border-gray-400 rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                             <div className="w-16 flex justify-center">
                                 <span className="text-white text-sm">RPM</span>
@@ -61,7 +61,7 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                                 type="number"
                                 value={feedRate}
                                 onChange={(e) => setFeedRate(Number(e.target.value))}
-                                className="flex-1 h-[3.5vh] p-2 border border-primary rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                className="flex-1 h-[3.5vh] p-2 border border-gray-400 rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
                             <div className="w-16 flex justify-center">
                                 <span className="text-white text-sm">mm/min</span>

@@ -6,7 +6,7 @@ const CoordinateSystemModal: React.FC = () => {
     const { coordinates, setCoordinate, resetCoordinates } = useCoordinateSystemStore();
 
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[53vh] w-[25vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[51vh] w-[25vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetCoordinates}><svg
                         width="20"
@@ -46,7 +46,7 @@ const CoordinateSystemModal: React.FC = () => {
                                     type="number"
                                     value={coordinates[rowIndex][colIndex]}
                                     onChange={(e) => setCoordinate(rowIndex, colIndex, e.target.value)}
-                                    className="w-[100%] max-w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    className="w-[100%] max-w-[100%] p-2 border border-gray-400 rounded text-center text-[85%] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                             ))}
                         </div>

@@ -6,7 +6,7 @@ const SoftwareLimitModal: React.FC = () => {
     const { limits, setLimit, resetLimits } = useSoftwareLimitStore();
 
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[37vh] w-[25vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[38vh] w-[25vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                     <button className="absolute top-[10px] right-[10px] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetLimits}><svg
                         width="20"
@@ -49,7 +49,7 @@ const SoftwareLimitModal: React.FC = () => {
                                     type="number"
                                     value={limits[index].min}
                                     onChange={(e) => setLimit(index, "min", e.target.value)}
-                                    className="w-[80px] p-[4px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    className="w-[80px] p-[4px] border border-gray-400 rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                                 <span className="font-bold w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400 text-left">
                                     mm
@@ -58,7 +58,7 @@ const SoftwareLimitModal: React.FC = () => {
                                     type="number"
                                     value={limits[index].max}
                                     onChange={(e) => setLimit(index, "max", e.target.value)}
-                                    className="w-[80px] p-[4px] border border-primary rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    className="w-[80px] p-[4px] border border-gray-400 rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                                 <span className="font-bold text-center w-[50px] p-2 bg-backgroundPrimary rounded text-gray-400">
                                     mm
