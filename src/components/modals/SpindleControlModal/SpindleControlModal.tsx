@@ -13,24 +13,24 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
     };
 
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[35%] max-w-[20%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="text-[100%] fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[35%] w-[20%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-inv">
                 <Dialog.Close asChild>
                     <button className="absolute top-[2%] right-[2%] bg-transparent border-none text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
-                <Dialog.Title className="text-3xl text-primary font-bold mb-titleBottomMargin">Spindle Control</Dialog.Title>
+                <Dialog.Title className="text-[200%] text-primary font-bold mb-titleBottomMargin">Spindle Control</Dialog.Title>
                 <Dialog.Description className="text-sm text-description mb-descriptionBottomMargin">
                     Adjust spindle rotation speed and feed rate.
                 </Dialog.Description>
 
                 <div className="text-primary text-sm flex flex-col gap-[15px]">
-                    <div className="flex flex-col gap-gridGap">
+                    <div className="flex flex-col gap-gridGap h-[20%]">
                         <label>Rotation Speed (RPM): </label>
-                        <div className="flex flex-col gap-gridGap">
+                        <div className="flex flex-col gap-gridGap h-full">
                             <input
                                 type="number"
                                 value={rotationSpeed}
                                 onChange={(e) => setRotationSpeed(Number(e.target.value))}
-                                className="h-[35px] w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
+                                className="h-full w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
                             />
                         </div>
                     </div>

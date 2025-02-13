@@ -15,7 +15,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
     };
 
     return (
-            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white max-w-[40%] w-[90%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
+            <Dialog.Content className="fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[52.5%] w-[40%] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-in">
                 <Dialog.Close asChild>
                 <button className="absolute top-[2%] right-[2%] bg-transparent border-none text-[100%] cursor-pointer text-description trainsition colors duration-200" onClick={resetAll}>✖</button>
                 </Dialog.Close>
@@ -51,7 +51,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                                       onChange={(e) => {
                                           setOffset(rowIndex, colIndex, e.target.value);
                                       }}
-                                      className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                      className="h-[100%] w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                   />
                               ))}
 
@@ -64,7 +64,7 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                                       onChange={(e) => {
                                           setPosition(rowIndex, colIndex, e.target.value);
                                       }}
-                                      className="w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                      className="h-[100%] w-[100%] p-2 border border-primary rounded text-center text-[85%] bg-backgroundPrimary text-white focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                   />
                               ))}
                           </React.Fragment>
