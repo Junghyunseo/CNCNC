@@ -1,14 +1,13 @@
-import HomeOptions from '../components/HomeOptions/HomeOptions';
-import '../App.css';
-import CoordinateSystemModal from '../components/modals/CoordinateSystemModal/CoordinateSystemModal';
-import ToolOffsetPositionTableModal from '../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal';
-import ToolLengthSensorPositionErrorTableModal from '../components/modals/ToolLengthSensorPositionErrorTableModal/ToolLengthSensorPositionErrorTableModal';
-import SpindleControlModal from '../components/modals/SpindleControlModal/SpindleControlModal';
-import SoftwareLimitModal from '../components/modals/SoftwareLimitModal/SoftwareLimitModal';
-import parkingOptionModal from '../components/modals/ParkingOptionModal/ParkingOptionModal';
+import HomeOptions from "../components/HomeOptions/HomeOptions";
+import "../App.css";
+import CoordinateSystemModal from "../components/modals/CoordinateSystemModal/CoordinateSystemModal";
+import ToolOffsetPositionTableModal from "../components/modals/ToolOffsetPositionTableModal/ToolOffsetPositionTableModal";
+import ToolLengthSensorPositionErrorTableModal from "../components/modals/ToolLengthSensorPositionErrorTableModal/ToolLengthSensorPositionErrorTableModal";
+import SpindleControlModal from "../components/modals/SpindleControlModal/SpindleControlModal";
+import SoftwareLimitModal from "../components/modals/SoftwareLimitModal/SoftwareLimitModal";
+import parkingOptionModal from "../components/modals/ParkingOptionModal/ParkingOptionModal";
 
 const Home = () => {
-
   return (
     <div className="flex flex-wrap justify-center items-center gap-6 p-6">
       <HomeOptions
@@ -43,6 +42,6 @@ const Home = () => {
       />
     </div>
   );
-}
+};
 
 export default Home;

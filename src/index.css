@@ -26,8 +26,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 /* h1 {
@@ -67,19 +67,22 @@ button:focus-visible {
   } */
 }
 
-
-@import "tailwindcss/preflight"
-@tailwind utilities;
+@import "tailwindcss/preflight" @tailwind utilities;
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #529BF7;
-  --color-backgroundPrimary: #1F2937;
-  --color-description: #9CA3AF;
-  --color-buttonHover: #005CCF;
+  --color-primary: #529bf7;
+  --color-backgroundPrimary: #1f2937;
+  --color-description: #9ca3af;
+  --color-buttonHover: #005ccf;
 
   --spacing-titleBottomMargin: 12px;
-  --spacing-descriptionBottomMargin: 32px;
+  --spacing-descriptionBottomMargin: 24px;
   --spacing-gridGap: 12px;
   --spacing-applyButtonTopMargin: 32px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }

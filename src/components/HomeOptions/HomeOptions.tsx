@@ -7,11 +7,15 @@ interface HomeOptionsProps {
   ModalComponent: React.FC;
 }
 
-const HomeOptions: React.FC<HomeOptionsProps> = ({ icon, title, ModalComponent }) => {
+const HomeOptions: React.FC<HomeOptionsProps> = ({
+  icon,
+  title,
+  ModalComponent,
+}) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="p-[15px] text-[12px] h-[10vh] w-[15vh] rounded-lg bg-[#1F2937] text-white border border-[#374151] hover:bg-[#2A3649] cursor-pointer focus:outline-none ">
+        <button className="p-[15px] text-[12px] h-[10vh] w-[15vh] rounded-lg bg-[#1E293B] text-white border border-[#374151] hover:bg-[#2A3649] cursor-pointer focus:outline-none ">
           <div className="flex flex-col items-center gap-[10px]">
             <div className="text-[24px]">{icon}</div>
             <div className="text-[13px]">{title}</div>
