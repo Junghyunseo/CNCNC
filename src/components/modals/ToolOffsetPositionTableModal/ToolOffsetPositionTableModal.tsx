@@ -41,13 +41,13 @@ const ToolOffsetPositionTableModal: React.FC = () => {
                 <div className="flex justify-center">
                   <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, 12.5%)", gap: "8px 12px" }}>
                       {/* 테이블 헤더 */}
-                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Index</span>
-                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Length</span>
-                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Tool Radius</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Index</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Length</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Radius</span>
                       <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">X</span>
                       <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Y</span>
-                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Zh</span>
-                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Zl</span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Z<sub className="text-xs ml-[-1px]">H</sub></span>
+                      <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Z<sub className="text-xs ml-[-1px]">L</sub></span>
 
                       {/* 각 행 (6개의 Tool) */}
                       {[...Array(6)].map((_, rowIndex) => (

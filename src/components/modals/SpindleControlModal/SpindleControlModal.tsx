@@ -37,29 +37,39 @@ const SpindleControlModal: React.FC = () => {  // ✅ 컴포넌트 이름 수정
                 </Dialog.Description>
 
                 <div className="text-primary text-sm flex flex-col gap-[15px]">
+                    {/* Rotation Speed */}
                     <div className="flex flex-col gap-gridGap h-[20%]">
-                        <label>Rotation Speed (RPM): </label>
-                        <div className="flex flex-col gap-gridGap h-full">
+                        <label>Rotation Speed:</label>
+                        <div className="flex items-center">
                             <input
                                 type="number"
                                 value={rotationSpeed}
                                 onChange={(e) => setRotationSpeed(Number(e.target.value))}
-                                className="w-[160px] h-[3.5vh] p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
+                                className="flex-1 h-[3.5vh] p-2 border border-primary rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
+                            <div className="w-16 flex justify-center">
+                                <span className="text-white text-sm">RPM</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    {/* Feed Rate */}
                     <div className="flex flex-col gap-gridGap">
-                        <label>Feed Rate (mm/min): </label>
-                        <div>
+                        <label>Feed Rate:</label>
+                        <div className="flex items-center">
                             <input
                                 type="number"
                                 value={feedRate}
                                 onChange={(e) => setFeedRate(Number(e.target.value))}
-                                className="h-[3.5vh] w-full p-2 border border-primary rounded text-[100%] bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none box-border"
+                                className="flex-1 h-[3.5vh] p-2 border border-primary rounded bg-gray-800 text-white text-right focus:outline-none focus:border-white focus:border-2 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
+                            <div className="w-16 flex justify-center">
+                                <span className="text-white text-sm">mm/min</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                    
                 <div className="w-[100%] h-full mx-auto flex flex-col justify-between">
                     <button className="h-[12%] w-full bg-primary text-white px-4 py-2 rounded-md cursor-pointer text-lg font-bold transition-colors duration-200 mt-applyButtonTopMargin hover:bg-buttonHover flex items-center justify-center text-center">Apply</button>
                 </div>

@@ -44,8 +44,8 @@ const ToolLengthSensorPositionErrorTableModal: React.FC = () => {
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Tool Index</span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">X</span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Y</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Zh</span>
-                        <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Zl</span>
+                        <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Z<sub className="text-xs ml-[-1px]">H</sub></span>
+                        <span className="font-bold text-center p-2 text-primary w-[100%] flex items-end justify-center">Z<sub className="text-xs ml-[-1px]">L</sub></span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Error(+)</span>
                         <span className="font-bold text-center p-2 text-[#50A5FA] w-[100%] flex items-end justify-center">Error(-)</span>
 
