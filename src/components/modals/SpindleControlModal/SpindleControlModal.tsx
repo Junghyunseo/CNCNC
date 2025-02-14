@@ -15,7 +15,7 @@ const SpindleControlModal: React.FC = () => {
   };
 
   return (
-    <Dialog.Content className="text-[100%] fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white h-[36vh] w-[20vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-inv">
+    <Dialog.Content className="text-[100%] fixed top-1/2 left-1/2 bg-backgroundPrimary p-6 rounded-lg border border-white w-[20vw] shadow-xl transform -translate-x-1/2 -translate-y-1/2 animate-fade-inv">
       <Dialog.Close asChild>
         <button
           className="absolute top-[10px] right-[10px] bg-transparent text-[100%] cursor-pointer text-description trainsition colors duration-200"

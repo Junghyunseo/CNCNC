@@ -67,7 +67,7 @@ const SoftwareLimitModal: React.FC = () => {
                 onChange={(e) => setLimit(index, "min", e.target.value)}
                 className="w-[80px] p-[4px] border border-gray-500 rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-1 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
-              <span className="font-bold w-[50px] p-2 bg-backgroundPrimary rounded text-gray-200 text-left">
+              <span className="font-bold w-[50px] p-2 bg-backgroundPrimary rounded text-white text-left">
                 mm
               </span>
               <input
@@ -76,7 +76,7 @@ const SoftwareLimitModal: React.FC = () => {
                 onChange={(e) => setLimit(index, "max", e.target.value)}
                 className="w-[80px] p-[4px] border border-gray-500 rounded text-center text-[14px] bg-gray-800 text-white focus:outline-none focus:border-white focus:border-1 focus:shadow-md [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
-              <span className="font-bold text-center w-[50px] p-2 bg-backgroundPrimary rounded text-gray-200">
+              <span className="font-bold w-[50px] p-2 bg-backgroundPrimary rounded text-white text-left">
                 mm
               </span>
             </React.Fragment>
